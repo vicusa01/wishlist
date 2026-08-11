@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Мой виш-лист на ДР</title>
+<style>
+  :root{
+    --paper:#fff8f0;
+    --ink:#2b2320;
+    --candy:#e8556b;
+    --mint:#3fa88a;
+    --gold:#d99a2b;
+    --lilac:#8b7bd8;
+    --line:#e4d9c9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 12% 8%, #ffe2b0 0, transparent 40%),
+      radial-gradient(circle at 92% 15%, #ffd2d9 0, transparent 35%),
+      radial-gradient(circle at 85% 90%, #c9f0e2 0, transparent 40%),
+      var(--paper);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color:var(--ink);
+    padding:40px 16px 80px;
+  }
+  .sheet{
+    max-width:640px;
+    margin:0 auto;
+    background:var(--paper);
+    border:2px solid var(--ink);
+    border-radius:18px;
+    padding:44px 40px 36px;
+    position:relative;
+    box-shadow:8px 8px 0 var(--gold);
+  }
+  .confetti{
+    position:absolute;
+    font-size:22px;
+    user-select:none;
+  }
+  header{
+    text-align:center;
+    margin-bottom:34px;
+  }
+  .eyebrow{
+    letter-spacing:.28em;
+    font-size:12px;
+    text-transform:uppercase;
+    color:var(--mint);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:40px;
+    margin:0 0 8px;
+    line-height:1.1;
+  }
+  h1 span{color:var(--candy);}
+  .sub{
+    font-style:italic;
+    color:#6b5f55;
+    font-size:15px;
+  }
+  .field-row{
+    display:flex;
+    gap:18px;
+    margin:24px 0 34px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size:13px;
+    color:#6b5f55;
+  }
+  .field-row div{flex:1;}
+  .field-row label{display:block; text-transform:uppercase; letter-spacing:.08em; font-size:10px; margin-bottom:4px;}
+  .field-row .fill{border-bottom:1.5px dashed var(--line); height:20px;}
+
+  section{margin-bottom:30px;}
+  .cat-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:14px;
+    color:var(--ink);
+  }
+  .cat-title .dot{
+    width:11px;height:11px;border-radius:50%;
+  }
+  .d1{background:var(--candy);}
+  .d2{background:var(--mint);}
+  .d3{background:var(--gold);}
+  .d4{background:var(--lilac);}
+
+  ol.items{
+    list-style:none;
+    margin:0; padding:0;
+  }
+  ol.items li{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    font-size:16px;
+  }
+  ol.items li:last-child{border-bottom:none;}
+  .num{
+    font-family:'Trebuchet MS', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:#b7ab99;
+    width:18px;
+  }
+  .items .fillline{
+    flex:1;
+    border-bottom:1.3px dotted var(--line);
+    min-height:22px;
+  }
+  .price{
+    font-family:'Trebuchet MS', sans-serif;
+    font-size:12px;
+    color:#b7ab99;
+    width:70px;
+    text-align:right;
+    border-bottom:1.3px dotted var(--line);
+  }
+
+  .note{
+    margin-top:38px;
+    padding:18px 20px;
+    border:1.5px dashed var(--line);
+    border-radius:12px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size:13px;
+    color:#6b5f55;
+    line-height:1.6;
+  }
+  footer{
+    text-align:center;
+    margin-top:30px;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size:11px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:#b7ab99;
+  }
+  @media print{
+    body{background:var(--paper); padding:0;}
+    .sheet{box-shadow:none; border:1px solid var(--ink);}
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="confetti" style="top:14px;left:22px;transform:rotate(-12deg);">🎈</div>
+    <div class="confetti" style="top:18px;right:26px;transform:rotate(10deg);">🎉</div>
+
+    <header>
+      <div class="eyebrow">Список желаний</div>
+      <h1>Мой <span>виш-лист</span> на день рождения</h1>
+      <div class="sub">то, что порадовало бы больше всего 🎂</div>
+    </header>
+
+    <div class="field-row">
+      <div><label>Имя</label><div class="fill"></div></div>
+      <div><label>Дата ДР</label><div class="fill"></div></div>
+      <div><label>Размеры / цвета</label><div class="fill"></div></div>
+    </div>
+
+    <section>
+      <div class="cat-title"><span class="dot d1"></span>Пожелания</div>
+      <ol class="items">
+        <li><span class="num">01</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">02</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">03</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">04</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">05</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">06</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">07</span><span class="fillline"></span><span class="price">₽</span></li>
+        <li><span class="num">08</span><span class="fillline"></span><span class="price">₽</span></li>
+      </ol>
+    </section>
+
+    <footer>Распечатай или отправь этот файл близким</footer>
+  </div>
+</body>
+</html>
